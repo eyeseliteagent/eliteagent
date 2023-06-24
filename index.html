@@ -6,7 +6,6 @@
     <title>Real Estate Website</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
-
 </head>
 <body>
 
@@ -16,20 +15,20 @@
             <img src="/img/logo/_756300-removebg-preview.png" alt="RealEstateCo">
             <span class="logo-text">Real Estate Elite Agents</span>
         </div>
-        <div class="menu-icon" onclick="toggleMenu()"><i class="ri-function-line"></i></div>
+        <div class="menu-icon" id="menuIcon"><i class="ri-function-line"></i></div>
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
-            <li class="dropdown" onmouseenter="toggleDropdown(true, 'aboutDropdown')" onmouseleave="toggleDropdown(false, 'aboutDropdown')">
+            <li class="dropdown" id="aboutDropdown">
                 <a href="#">About</a>
-                <div class="dropdown-content" id="aboutDropdown">
+                <div class="dropdown-content" id="aboutDropdownContent">
                     <a href="#">Company</a>
                     <a href="#">Team</a>
                     <a href="#">Careers</a>
                 </div>
             </li>
-            <li class="dropdown" onmouseenter="toggleDropdown(true, 'propertiesDropdown')" onmouseleave="toggleDropdown(false, 'propertiesDropdown')">
+            <li class="dropdown" id="propertiesDropdown">
                 <a href="#">Properties</a>
-                <div class="dropdown-content" id="propertiesDropdown">
+                <div class="dropdown-content" id="propertiesDropdownContent">
                     <a href="#">Residential</a>
                     <a href="#">Commercial</a>
                 </div>
@@ -42,9 +41,8 @@
         </ul>
     </nav>
 
-      <!--footer-->
+    <!--footer-->
 
-      <!--Scripts-->
     <script src="main.js"></script>
 </body>
 </html>
