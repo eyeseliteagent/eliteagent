@@ -1,15 +1,23 @@
 var menuIcon = document.getElementById("menuIcon");
 var navLinks = document.getElementById("navLinks");
-var aboutDropdown = document.getElementById("aboutDropdown");
-var aboutDropdownContent = document.getElementById("aboutDropdownContent");
-var propertiesDropdown = document.getElementById("propertiesDropdown");
-var propertiesDropdownContent = document.getElementById("propertiesDropdownContent");
+var dropdowns = document.querySelectorAll(".dropdown");
+var dropdownContents = document.querySelectorAll(".dropdown-content");
 
 menuIcon.addEventListener("click", toggleMenu);
-aboutDropdown.addEventListener("mouseover", function() { toggleDropdown(true, aboutDropdownContent); });
-aboutDropdown.addEventListener("mouseout", function() { toggleDropdown(false, aboutDropdownContent); });
-propertiesDropdown.addEventListener("mouseover", function() { toggleDropdown(true, propertiesDropdownContent); });
-propertiesDropdown.addEventListener("mouseout", function() { toggleDropdown(false, propertiesDropdownContent); });
+
+dropdowns.forEach(function(dropdown) {
+    dropdown.addEventListener("click", function(event) {
+        event.stopPropagation();
+        var dropdownContent = this.querySelector(".dropdown-content");
+
+        closeDropdowns();
+        toggleDropdown(dropdownContent);
+    });
+});
+
+navLinks.addEventListener("click", function() {
+    closeDropdowns();
+});
 
 function toggleMenu() {
     if (navLinks.style.right === "0px") {
@@ -19,10 +27,12 @@ function toggleMenu() {
     }
 }
 
-function toggleDropdown(isHovered, dropdownContent) {
-    if (isHovered) {
-        dropdownContent.style.display = "block";
-    } else {
+function toggleDropdown(dropdownContent) {
+    dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+}
+
+function closeDropdowns() {
+    dropdownContents.forEach(function(dropdownContent) {
         dropdownContent.style.display = "none";
-    }
+    });
 }
