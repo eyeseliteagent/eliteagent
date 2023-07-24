@@ -124,3 +124,14 @@ sr.reveal(`.home__images`, { delay: 800, origin: 'bottom' })
 sr.reveal(`.logos__img`, { interval: 100 })
 sr.reveal(`.value__images, .contact__content`, { origin: 'left' })
 sr.reveal(`.value__content, .contact__images`, { origin: 'right' })
+
+// filter page redirect
+
+// Get the button element
+const searchButton = document.getElementById('searchButton');
+
+// Add a click event listener to the button
+searchButton.addEventListener('click', function() {
+    // When the button is clicked, navigate to filter.html
+    window.location.href = 'filter.html';
+});
