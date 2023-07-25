@@ -144,11 +144,7 @@ body.dark-theme {
   --container-color: hsl(228, 16%, 12%);
 } */
 
-/*========== 
-    Color changes in some parts of 
-    the website, in dark theme 
-==========*/
-.dark-theme .home__search,
+
 .dark-theme .swiper-button-next,
 .dark-theme .swiper-button-prev {
   border: 3px solid var(--border-color);
@@ -282,6 +278,7 @@ body.dark-theme {
     border-radius: 1.25rem;
     transition: .4s;
   }
+
 
   .nav__list {
     display: flex;
@@ -992,6 +989,12 @@ body.dark-theme {
     width: 342px;
   }
 
+  .nav__logo {
+    padding-top: 25px;
+    height: 40px;
+    width: 60px;
+  }
+
   .home__search {
     width: 412px;
   }
@@ -1010,6 +1013,12 @@ body.dark-theme {
   .home__container {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 2rem;
+  }
+
+  .nav__logo {
+    padding-top: 40px;
+    height: 40px;
+    width: 80px;
   }
 
   .home__orbe {
