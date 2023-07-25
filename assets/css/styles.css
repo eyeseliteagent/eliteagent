@@ -555,8 +555,8 @@ body.dark-theme {
 .value__orbe {
   width: 266px;
   height: 316px;
-  background-color: hsl(228, 24%, 97%);
-  border-radius: 135px 135px 16px 16px;
+  /* background-color: hsl(228, 24%, 97%);
+  border-radius: 135px 135px 16px 16px; */
 }
 
 .value__img {
@@ -760,6 +760,7 @@ body.dark-theme {
   color: hsl(228, 90%, 92%);
   font-size: var(--small-font-size);
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .subscribe__button {
@@ -915,6 +916,7 @@ body.dark-theme {
 
 /* For small devices */
 @media screen and (max-width: 350px) {
+
   .container {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -935,6 +937,7 @@ body.dark-theme {
 }
 
 @media screen and (max-width: 320px) {
+ 
   .nav__menu {
     padding: 1.3rem 1.5rem;
   }
@@ -985,6 +988,7 @@ body.dark-theme {
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
+
   .nav__menu {
     width: 342px;
   }
@@ -1010,6 +1014,7 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 767px) {
+ 
   .home__container {
     grid-template-columns: repeat(2, 1fr);
     padding-top: 2rem;
@@ -1060,6 +1065,7 @@ body.dark-theme {
 
 /* For large devices */
 @media screen and (min-width: 1023px) {
+ 
   .section {
     padding: 7.5rem 0 1rem;
   }
@@ -1273,6 +1279,7 @@ body.dark-theme {
 }
 
 @media screen and (min-width: 1040px) {
+
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1294,4 +1301,15 @@ body.dark-theme {
   body {
     zoom: 2;
   }
+}
+/* logo */
+ .left-part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+ .left-part img {
+  width: 65px;
+
 }
