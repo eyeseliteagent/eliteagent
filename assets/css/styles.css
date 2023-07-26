@@ -908,11 +908,6 @@ body.dark-theme {
   bottom: 8rem;
 }
 
-/*=============== BREAKPOINTS ===============*/
-/*
-  max-width: 320    =>   para pantallas menor o igual a 320
-  min-width: 576    =>   para pantallas mayor o igual a 576
-*/
 
 /* For small devices */
 @media screen and (max-width: 350px) {
@@ -933,6 +928,11 @@ body.dark-theme {
   .contact__card {
     grid-template-columns: repeat(1, 180px);
     justify-content: center;
+  }
+
+  .left-part img{
+  padding: 0.5em;
+  height: auto;
   }
 }
 
@@ -984,6 +984,11 @@ body.dark-theme {
   .footer__content {
     gap: 2.5rem;
   }
+  
+  .left-part img {
+    padding: 0.5rem ;
+    height: auto;
+  }
 }
 
 /* For medium devices */
@@ -1011,6 +1016,11 @@ body.dark-theme {
   .footer__content {
     grid-template-columns: repeat(3, max-content);
   }
+
+  .left-part img {
+    padding: 0.5rem ;
+    height: auto;
+  }
 }
 
 @media screen and (min-width: 767px) {
@@ -1023,7 +1033,12 @@ body.dark-theme {
   .nav__logo {
     padding-top: 30px;
     height: 40px;
-    width: 80px;
+    width: 70px;
+  }
+
+  .left-part img {
+    height: 55px;
+    width: 12px ;
   }
 
   .home__orbe {
@@ -1053,13 +1068,18 @@ body.dark-theme {
     justify-content: initial;
   }
 
-  .subscribe__container {
+  /* .subscribe__container {
     padding: 3rem 13rem;
-  }
+  } */
 
   .footer__container {
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
+  }
+
+  .left-part img {
+    padding: 0.5 rem ;
+    height: auto;
   }
 }
 
@@ -1247,7 +1267,6 @@ body.dark-theme {
 
   .subscribe__description {
     font-size: var(--normal-font-size);
-    padding: 0 8rem;
   }
 
   .subscribe__button {
@@ -1312,4 +1331,12 @@ body.dark-theme {
  .left-part img {
   width: 65px;
 
+}
+
+
+@media (min-width: 321px) and (max-width: 575px) {
+  .left-part img {
+    padding: 0.5em;
+  height: auto;
+  }
 }
