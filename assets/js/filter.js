@@ -1,34 +1,55 @@
 // Sample data for the boxes
 const boxesData = [
     {
-        image: "https://unsplash.com/photos/eqw1uEXxZqc",
-        name: "John Doe",
-        buildingType: "Building Type 1",
-        location: "Location 1",
+        image: "/assets/img/popular1.jpg",
+        title: " Chettinad Farm House",
+        location: "Chinnathagadam, Coimbatore",
+        buildingType:"Building Type1",
+        tagline: "Embrace the charm of countryside living with our exquisite form houses.",
     },
     {
-        image: "https://unsplash.com/photos/eqw1uEXxZqc",
-        name: "Jane Smith",
-        buildingType: "Building Type 2",
-        location: "Location 2",
-    },
+        image: "/assets/img/popular1.jpg",
+        title: " Chettinad Farm House",
+        location: "Chinnathagadam, Coimbatore",
+        buildingType:"Building Type1",
+        tagline: "Embrace the charm of countryside living with our exquisite form houses.",
+    }, {
+        image: "/assets/img/popular1.jpg",
+        title: " Chettinad Farm House",
+        location: "Chinnathagadam, Coimbatore",
+        buildingType:"Building Type1",
+        tagline: "Embrace the charm of countryside living with our exquisite form houses.",
+    }, {
+        image: "/assets/img/popular1.jpg",
+        title: " Chettinad Farm House",
+        location: "Chinnathagadam, Coimbatore",
+        buildingType:"Building Type1",
+        tagline: "Embrace the charm of countryside living with our exquisite form houses.",
+    }, 
+   
+   
     // Add more box data objects as needed
 ];
 
 // Function to create the HTML structure for a single box
 function createBoxHTML(boxData) {
     return `
-        <div class="box">
-            <div class="image-container">
-                <img src="${boxData.image}" alt="Image">
-            </div>
-            <div class="info-container">
-                <h2>${boxData.name}</h2>
-                <p>Building Type: <span class="building-type">${boxData.buildingType}</span></p>
-                <p>Location: <span class="location">${boxData.location}</span></p>
-                <button class="quote-button">Quote</button>
-            </div>
-        </div>
+    <div class="popular__container>
+            <article class="popular__card swiper-slide">
+                            <img src=${boxData.image} alt="" class="popular__img">
+                            <div class="popular__data">
+                                <h3 class="popular__title">
+                                    ${boxData.title}
+                                </h3>
+                                <h2 class="popular__price">
+                                    <i class='bx bx-map'></i> ${boxData.location}
+                                </h2>
+                                <p class="popular__description">
+                               ${boxData.tagline}
+                             </p>
+                            </div>
+                        </article>
+    </div>
     `;
 }
 
