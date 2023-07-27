@@ -4,26 +4,26 @@ const boxesData = [
         image: "/assets/img/popular1.jpg",
         title: " Chettinad Farm House",
         location: "Chinnathagadam, Coimbatore",
-        buildingType:"Building Type1",
+        buildingType:"Building Type 1",
         tagline: "Embrace the charm of countryside living with our exquisite form houses.",
     },
     {
         image: "/assets/img/popular1.jpg",
         title: " Chettinad Farm House",
         location: "Chinnathagadam, Coimbatore",
-        buildingType:"Building Type1",
+        buildingType:"Building Type 1",
         tagline: "Embrace the charm of countryside living with our exquisite form houses.",
     }, {
         image: "/assets/img/popular1.jpg",
         title: " Chettinad Farm House",
         location: "Chinnathagadam, Coimbatore",
-        buildingType:"Building Type1",
+        buildingType:"Building Type 1",
         tagline: "Embrace the charm of countryside living with our exquisite form houses.",
     }, {
         image: "/assets/img/popular1.jpg",
         title: " Chettinad Farm House",
         location: "Chinnathagadam, Coimbatore",
-        buildingType:"Building Type1",
+        buildingType:"Building Type 1",
         tagline: "Embrace the charm of countryside living with our exquisite form houses.",
     }, 
    
@@ -34,7 +34,7 @@ const boxesData = [
 // Function to create the HTML structure for a single box
 function createBoxHTML(boxData) {
     return `
-    <div class="popular__container>
+    
             <article class="popular__card swiper-slide">
                             <img src=${boxData.image} alt="" class="popular__img">
                             <div class="popular__data">
@@ -49,7 +49,7 @@ function createBoxHTML(boxData) {
                              </p>
                             </div>
                         </article>
-    </div>
+    
     `;
 }
 

@@ -1,57 +1,146 @@
-/* Styling for the filter container */
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(228, 66%, 53%);
+  --first-color-alt: hsl(228, 66%, 47%);
+  --first-color-light: hsl(228, 62%, 59%);
+  --first-color-lighten: hsl(228, 100%, 97%);
+  --second-color: hsl(25, 83%, 53%);
+  --title-color: hsl(228, 57%, 28%);
+  --text-color: hsl(228, 15%, 50%);
+  --text-color-light: hsl(228, 12%, 75%);
+  --border-color: hsl(228, 99%, 98%);
+  --body-color: #fff;
+  --container-color: #fff;
+
+  /* --first-color: hsl(228, 66%, 53%);
+  --first-color-alt: hsl(228, 66%, 47%);
+  --first-color-light: hsl(228, 62%, 59%);
+  --first-color-lighten: hsl(228, 100%, 97%);
+  --second-color: hsl(25, 83%, 53%);
+  --title-color: hsl(228, 57%, 28%);
+  --text-color: hsl(228, 15%, 50%);
+  --text-color-light: hsl(228, 12%, 75%);
+  --border-color: hsl(228, 99%, 98%);
+  --body-color: #fff;
+  --container-color: #fff; */
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .3s;
+  /* For animation dark mode */
+}
+
+/* Common styles for the filter container */
 .filter-container {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styling for labels */
+label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Styling for the search button */
+button {
+  padding: 8px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  /* Styling for labels */
-  label {
-    font-weight: bold;
+
+  /* Styling for labels in media view */
+  .label1, .label2 {
+    font-size: 16px;
   }
-  
-  /* Styling for select elements */
-  select {
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Styling for the search button */
-  button {
-    padding: 8px 15px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Media query for responsiveness */
-  @media only screen and (max-width: 768px) {
-    .filter-container {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    select {
-      width: 100%;
-    }
-  }
-  
+}
+
+
+/* Common styles for popular cards */
 .popular__container {
-    padding: 1rem 0 5rem;
-  }
-  
+  align-items: center;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .popular__card {
-    width: 290px;
-    background-color: var(--container-color);
-    padding: .5rem .5rem 1.5rem;
-    border-radius: 1rem;
-    margin: 0 auto;
-    transition: .4s;
-  }
-  
+  width: calc(33.33% - 2rem);
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
   .popular__img {
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -81,5 +170,12 @@
   }
   
   .popular__card:hover {
-    box-shadow: 0 12px 16px hsla(228, 66%, 45%, .1);
+    box-shadow: 0 12px 20px 22px hsla(228, 82%, 37%, 0.1);
   }
+
+
+
+
+
+
+
