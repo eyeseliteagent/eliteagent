@@ -75,16 +75,25 @@ body {
 
 /* Common styles for the filter container */
 .filter-container {
+  margin-top: 10px;
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  
 }
 
 /* Styling for labels */
 label {
+  margin-top: 10px;
   font-weight: bold;
   font-size: 18px;
+}
+select{
+    width: 150px; /* Set the desired width */
+    border: 2px solid #000; /* Add a bold border with a color of your choice */
+    padding: 8px; /* Add some padding to make it look visually appealing */
+    border-radius: 1rem;
 }
 
 /* Styling for the search button */
@@ -117,15 +126,17 @@ button{
 
 /* Common styles for popular cards */
 .popular__container {
+  margin-left: 20px;
+  margin-right: 20px;
   align-items: center;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .popular__card {
-  width: calc(33.33% - 2rem);
+  align-items: center;
+  width:450px;
   background-color: var(--container-color);
   padding: 1rem;
   border-radius: 1rem;
@@ -137,7 +148,7 @@ button{
   .popular__img {
     border-radius: 1rem;
     margin-bottom: 1rem;
-    width: 23rem;
+    width:400px;
   }
   
   .popular__data {
@@ -186,51 +197,54 @@ button{
 }
 
 @media screen and (max-width: 1023px) {
-
+ .label{
+  display: inline-block;
+}
+.popular__card{
+  display: inline-block;
+}
 }
 
 /* For small devices */
 @media screen and (max-width: 350px) {
-
+  .label{
+    display: inline-block;
+  }
 }
 
 @media screen and (max-width: 320px) {
- 
+  .label{
+    display: inline-block;
+  }
 }
 
 
 /* For medium devices */
 @media screen and (min-width: 576px) {
 
-
+  .label{
+    display: inline-block;
+  }
 }
 
 @media screen and (min-width: 767px) {
  
-
+  .label{
+    display: inline-block;
+  }
 }
 
 /* For large devices */
 @media screen and (min-width: 1023px) {
  
-
+  .label{
+    display: inline-block;
+  }
 }
 
 @media screen and (min-width: 1040px) {
-
-
-}
-
-/* For 2K & 4K resolutions */
-@media screen and (min-width: 2048px) {
-  body {
-    zoom: 1.5;
+  .label{
+    display: inline-block;
   }
-}
 
-@media screen and (min-width: 3840px) {
-  body {
-    zoom: 2;
-  }
 }
-
