@@ -128,17 +128,15 @@ button{
 .popular__container {
   margin-left: 20px;
   margin-right: 20px;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .popular__card {
-  align-items: center;
   width:450px;
   background-color: var(--container-color);
-  padding: 1rem;
+  padding: .5rem .5rem 1.5rem;
   border-radius: 1rem;
   margin-bottom: 2rem;
   transition: 0.4s;
@@ -146,6 +144,7 @@ button{
 }
 
   .popular__img {
+    margin-left: 9px;
     border-radius: 1rem;
     margin-bottom: 1rem;
     width:400px;
