@@ -8,7 +8,7 @@ const boxesData = [
         tagline: "Embrace the charm of countryside living with our exquisite form houses.",
     },
     {
-        image: "/assets/img/popular2.jpg",
+        image: "/eliteagent/assets/img/popular2.jpg",
         title: "Doctor Colony",
         location: "Palladam, Coimbatore",
         buildingType:"Building Type 1",
