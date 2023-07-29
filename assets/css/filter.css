@@ -126,8 +126,8 @@ button{
 
 /* Common styles for popular cards */
 .popular__container {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -144,7 +144,7 @@ button{
 }
 
   .popular__img {
-    margin-left: 9px;
+    margin-left: 16px;
     border-radius: 1rem;
     margin-bottom: 1rem;
     width:400px;
