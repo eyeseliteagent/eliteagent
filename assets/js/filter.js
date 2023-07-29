@@ -1,7 +1,7 @@
 // Sample data for the boxes
 const boxesData = [
     {
-        image: "/assets/img/popular1.jpg",
+        image: "./assets/img/popular1.jpg",
         title: " Chettinad Farm House",
         location: "Chinnathagadam, Coimbatore",
         buildingType:"Building Type 1",
