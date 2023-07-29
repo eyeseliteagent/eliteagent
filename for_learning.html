@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!-- Google Fonts (poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(228, 66%, 53%);
+  --first-color-alt: hsl(228, 66%, 47%);
+  --first-color-light: hsl(228, 62%, 59%);
+  --first-color-lighten: hsl(228, 100%, 97%);
+  --second-color: hsl(25, 83%, 53%);
+  --title-color: hsl(228, 57%, 28%);
+  --text-color: hsl(228, 15%, 50%);
+  --text-color-light: hsl(228, 12%, 75%);
+  --border-color: hsl(228, 99%, 98%);
+  --body-color: #fff;
+  --container-color: #e4e2e2;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .3s;
+  /* For animation dark mode */
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.search-bar{
+    margin: 1em auto;
+    background: var(--first-color-lighten);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    max-width: 500px;
+    border-radius: 8px;
+    padding: 0 1em;
+    border-color: #111;
+}
+
+.search-bar input{
+    flex-grow: 1;
+    height: 100%;
+    padding: 0.5em 0;
+    background: none;
+    border: none;
+    color: var(--first-color-alt);
+    font-size: 1.3em;
+}
+
+.search-bar input::placeholder{
+    color: var(--first-color-alt);
+}
+
+.search-bar input:focus{
+    outline: none;
+}
+
+.panels{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin: 8em 0 5em 0;
+}
+
+.panel{
+    background: var(--container-color);
+    padding: 1.5em 1.8em 1.5em 1.8em;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+
+
+.panel h2{
+    margin: 1em 0 0.5em 0;
+}
+
+.panel p{
+    font-size: 0.9em;
+    line-height: 25px;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.panel a{
+    display: inline-block;
+    color: var(--text-color);
+    margin-top: 1em;
+}
+
+.panel a:hover{
+    color: var(--first-color);
+}
+
+.panel img {
+  border-radius: 2%;
+  width: 100%;
+  height: auto;
+}
+    </style>
+    <title>Best Properties For You</title>
+</head>
+<body>
+    <h1>How can I help you?</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search..." class="search">
+        <span class="material-symbols-outlined">
+            search
+        </span>
+    </div>
+
+    <div class="panels">
+        <div class="panel">
+        <img src="assets/img/popular4.jpg" alt="">
+            <h1>Chettinad Farm House</h1>
+            <h2>Chinnathagadam, Coimbatore</h2>
+            <p>
+                Embrace the charm of countryside living with our exquisite form houses.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+        
+        <div class="panel">
+            <span class="material-symbols-outlined">
+                currency_bitcoin
+            </span>
+            <h2>Getting into Crypto</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur commodi tempore atque doloribus nihil recusandae repudiandae natus maxime ad tenetur.
+            </p>
+            <a href="#">Read More</a>
+        </div>
+
+
+    </div>
+    <script>
+      // Get elements from the DOM
+const search = document.querySelector('.search');
+const panels = document.querySelectorAll('.panel');
+
+// Add a input event
+// This event fires whenever you type something in the input field
+search.addEventListener('input', ()=>{
+    // If the search bar isn't empty
+    if(search.value!==""){
+        //Loop through all panels
+        panels.forEach(panel=>{
+            // Get the panel heading
+            const panelHeading = panel.querySelector('h2');
+            // Convert input value to lowercase letters
+            const panelHeadingText = panelHeading.innerHTML.toLowerCase();
+            // Convert input value to lowercase letters
+            // This will make the search case Unsensitive
+            const inputText = search.value.toLowerCase();
+            // If the heading text DOESN'T(!) contain what is in the search bar
+            if(!panelHeadingText.includes(inputText)){
+                // Hide that panel
+                panelHeading.parentElement.style.display = "none";
+            }
+            else{
+                // But if it does then make sure to show that panel
+                panelHeading.parentElement.style.display = "block";
+            }
+        });
+    }
+    else{
+        // If the search bar is empty
+        // Show all of the panels
+        panels.forEach(panel=>{
+            panel.style.display="block";
+        });
+    }
+});
+
+// disabling inspect element
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault(); //this prevents right click
+});
+document.onkeydown=function(e){
+    if(event.keycode==123){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode=="I".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode=="C".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode=="J".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.keyCode=="U".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.keyCode=="S".charCodeAt(0)){
+        return false;
+    }
+};
+    </script>
+</body>
+</html>

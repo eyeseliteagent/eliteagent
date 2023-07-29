@@ -112,6 +112,8 @@ function populateBoxes() {
     });
 }
 
+
+
 // Function to apply filtering when the "Search" button is clicked
 function filterBoxes() {
     populateBoxes();
