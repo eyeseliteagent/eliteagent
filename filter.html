@@ -116,26 +116,94 @@
           box-shadow: 0 12px 20px 22px hsla(228, 82%, 37%, 0.1);
         }
 
+        html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
 
         /* screen resolution */
 
         /* For 1024px */
 @media (min-width: 1024px) {
-  .search-bar {
-  padding-right:5% ;
-  }
+    
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 }
 
 /* For 768px */
 @media (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    width: 768px;
-  }
+   
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 30px;
+    padding-top: 10%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 }
 
 /* For 425px */
 @media (min-width: 425px) and (max-width: 767px) {
-  .search-bar {
+  
+    .search-bar {
+    margin-right: 2rem;
+    margin-left: 7rem;
+  }
+
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 30px;
+    padding-top: 15%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+}
+
+/* For 375px */
+@media (min-width: 375px) and (max-width: 424px) {
+    .search-bar {
     margin-right: 2rem;
     margin-left: 2rem;
   }
@@ -152,31 +220,61 @@
     }
 
     h1{
-    font-size: 30px;
+    font-size: 25px;
     padding-top: 20%;
     }
 
-    .search span {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 12px;
-        line-height: 20px;
+    .panel{
+        margin-left: 10%;
+        margin-right: 10%;
     }
-}
 
-/* For 375px */
-@media (min-width: 375px) and (max-width: 424px) {
-  .container {
-    width: 375px;
-  }
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 }
 
 /* For 320px */
 @media (max-width: 374px) {
-  .container {
-    width: 320px;
+    
+
+    .search-bar {
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
+
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 25px;
+    padding-top: 20%;
+    }
+
+    .panel{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
 }
 
         
@@ -204,16 +302,13 @@
     <h1>How can I help you?</h1>
     <div class="search-bar">
         <input type="text" placeholder="Search location... " class="search">
-        <span class="material-symbols-outlined">
-            search
-        </span>
     </div>
 
     <div class="panels">
 
         <div class="panel">
-            <a href="/chettinad farm house.html">
-        <img src="assets/img/popular4.jpg" alt="">
+            <a href="/chettinad_farm_house.html">
+        <img src="assets/img/popular1.jpg" alt="">
             <h1>Chettinad Farm House</h1>
             <h2>Chinnathagadam, Coimbatore</h2>
             <p>
@@ -223,8 +318,8 @@
         </div>
         
         <div class="panel">
-            <a href="/Doctor colony.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <a href="/Doctor_colony.html">
+            <img src="assets/img/popular2.jpg" alt="">
             <h1>Doctor Colony</h1>
             <h2>Palladam, Coimbatore</h2>
             <p>
@@ -234,8 +329,8 @@
         </div>
 
         <div class="panel">
-            <a href="/Kerala Themed Farm House.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <a href="/Kerala_Themed_Farm_House.html">
+            <img src="assets/img/popular3.jpg" alt="">
             <h1>Kerala Themed Farm House </h1>
             <h2>Navakkarai, Coimbatore </h2>
             <p>
@@ -245,7 +340,7 @@
         </div>
 
         <div class="panel">
-            <a href="/krishna Avenue.html">
+            <a href="/krishna_Avenue.html">
             <img src="assets/img/popular4.jpg" alt="">
             <h1>Krishna Avenue </h1>
             <h2>Dhayanur, Karamadai </h2>
@@ -256,8 +351,8 @@
         </div>
 
         <div class="panel">
-            <a href="/sri nila Avenue.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <a href="/sri_nila_Avenue.html">
+            <img src="assets/img/popular5.jpg" alt="">
             <h1>Sri Nila Avenue </h1>
             <h2>Ammaplayam, Tiruppur </h2>
             <p>
@@ -268,7 +363,7 @@
 
         <div class="panel">
             <a href="/Blissful Hill.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <img src="assets/img/popular1.jpg" alt="">
             <h1>Blissful Hill </h1>
             <h2>Anaikatti, Sholayur </h2>
             <p>
@@ -278,8 +373,8 @@
         </div>
 
         <div class="panel">
-            <a href="/Rj Garden.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <a href="/Rj_Garden.html">
+            <img src="assets/img/popular2.jpg" alt="">
             <h1>RJ Garden </h1>
             <h2>Karamadai </h2>
             <p> 
@@ -289,8 +384,8 @@
         </div>
 
         <div class="panel">
-            <a href="/sfari farms.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <a href="/sfari_farms.html">
+            <img src="assets/img/popular3.jpg" alt="">
             <h1>Safari Farms</h1>
             <h2>Velliyankadu, Karamadai</h2>
             <p>
@@ -311,8 +406,8 @@
         </div>
 
         <div class="panel">
-            <a href="/legacy estate.html">
-            <img src="assets/img/popular4.jpg" alt="">
+            <a href="/legacy_estate.html">
+            <img src="assets/img/popular5.jpg" alt="">
             <h1>Legacy Estate </h1>
             <h2>Nanjundapuram, Coimbatore </h2>
             <p>
