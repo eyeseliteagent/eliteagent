@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!--=============== FAVICON ===============-->
     <link rel="shortcut icon" href="assets/img/eyeslogo.png" type="image/x-icon">
@@ -170,10 +172,10 @@
 /* For 425px */
 @media (min-width: 425px) and (max-width: 767px) {
   
-    .search-bar {
+    /* .search-bar {
     margin-right: 2rem;
     margin-left: 7rem;
-  }
+  } */
 
     .search {
     font-size: 20px;
@@ -278,6 +280,101 @@
 }
 
         
+/*WhatsApp Animated Icon Styles*/
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.icon-container {
+  display: inline-flex; /* Centers the icon vertically */
+  justify-content: center; /* Centers the icon horizontally */
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the border round */
+  background-color:white; /* Sets the inside color to black */
+  border: 1px solid,black; /* Adjust border color/size as needed */
+}
+
+.whatsapp-icon i {
+  font-size: 48px;
+  color: green;
+  align-self: center; /* Centers the icon vertically */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.whatsapp-icon p {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  margin-bottom: 10px; /* Add bottom margin */
+}
+
+/* Change color on hover */
+.whatsapp-icon:hover .icon-container {
+  background-color:black;
+}
+
+.whatsapp-icon:hover i {
+  color: green;
+}
+
+/*Animation Keyframes*/
+@keyframes move {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+}
+
+.move {
+  animation: move 2s infinite;
+}
+
+@media (max-width: 600px) {
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 10px;  /* reduced bottom margin */
+    right: 10px;  /* reduced right margin */
+  }
+  
+  .icon-container {
+    width: 50px;  /* reduced size */
+    height: 50px;  /* reduced size */
+  }
+  
+  .whatsapp-icon i {
+    font-size: 30px;  /* reduced font size */
+  }
+  
+  .whatsapp-icon p {
+    font-size: 12px;  /* reduced font size */
+  }
+  
+  /*Reduce animation intensity for smaller screens*/
+  @keyframes move {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }  /* reduced translation */
+  }
+
+}
+
+/*view more*/
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
         
             </style>
 
@@ -285,6 +382,22 @@
 </head>
 
 <body>
+        <!-- WhatsApp Animated Icon -->
+<div id="whatsapp-icon" class="whatsapp-icon">
+    <a href="https://wa.me/919865523344" target="_blank">
+        <div class="icon-container">
+            <i class="ri-whatsapp-line"></i>
+                </div>
+        <p>WhatsApp Now!</p>
+    </a>
+</div>
+
+<!-- Animation Script -->
+<script>
+    window.onload = function() {
+        document.getElementById('whatsapp-icon').classList.add('move');
+    };
+</script>
 
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
@@ -307,7 +420,7 @@
     <div class="panels">
 
         <div class="panel">
-            <a href="/chettinad_farm_house.html">
+            <a href="/eliteagent/chettinad_farm_house.html">
         <img src="assets/img/popular1.jpg" alt="">
             <h1>Chettinad Farm House</h1>
             <h2>Chinnathagadam, Coimbatore</h2>
@@ -318,7 +431,7 @@
         </div>
         
         <div class="panel">
-            <a href="/Doctor_colony.html">
+            <a href="/eliteagent/Doctor_colony.html">
             <img src="assets/img/popular2.jpg" alt="">
             <h1>Doctor Colony</h1>
             <h2>Palladam, Coimbatore</h2>
@@ -329,7 +442,7 @@
         </div>
 
         <div class="panel">
-            <a href="/Kerala_Themed_Farm_House.html">
+            <a href="/eliteagent/Kerala_Themed_Farm_House.html">
             <img src="assets/img/popular3.jpg" alt="">
             <h1>Kerala Themed Farm House </h1>
             <h2>Navakkarai, Coimbatore </h2>
@@ -340,7 +453,7 @@
         </div>
 
         <div class="panel">
-            <a href="/krishna_Avenue.html">
+            <a href="/eliteagent/krishna_Avenue.html">
             <img src="assets/img/popular4.jpg" alt="">
             <h1>Krishna Avenue </h1>
             <h2>Dhayanur, Karamadai </h2>
@@ -351,7 +464,7 @@
         </div>
 
         <div class="panel">
-            <a href="/sri_nila_Avenue.html">
+            <a href="/eliteagent/sri_nila_Avenue.html">
             <img src="assets/img/popular5.jpg" alt="">
             <h1>Sri Nila Avenue </h1>
             <h2>Ammaplayam, Tiruppur </h2>
@@ -362,7 +475,7 @@
         </div>
 
         <div class="panel">
-            <a href="/Blissful Hill.html">
+            <a href="/eliteagent/Blissful Hill.html">
             <img src="assets/img/popular1.jpg" alt="">
             <h1>Blissful Hill </h1>
             <h2>Anaikatti, Sholayur </h2>
@@ -373,7 +486,7 @@
         </div>
 
         <div class="panel">
-            <a href="/Rj_Garden.html">
+            <a href="/eliteagent/Rj_Garden.html">
             <img src="assets/img/popular2.jpg" alt="">
             <h1>RJ Garden </h1>
             <h2>Karamadai </h2>
@@ -384,7 +497,7 @@
         </div>
 
         <div class="panel">
-            <a href="/sfari_farms.html">
+            <a href="/eliteagent/sfari_farms.html">
             <img src="assets/img/popular3.jpg" alt="">
             <h1>Safari Farms</h1>
             <h2>Velliyankadu, Karamadai</h2>
@@ -395,7 +508,7 @@
         </div>
 
         <div class="panel">
-            <a href="/lusberg.html">
+            <a href="/eliteagent/lusberg.html">
             <img src="assets/img/popular4.jpg" alt="">
             <h1>Lushberg Luxury Villas</h1>
             <h2>Kotagiri, Towards Ooty</h2>
@@ -406,7 +519,7 @@
         </div>
 
         <div class="panel">
-            <a href="/legacy_estate.html">
+            <a href="/eliteagent/legacy_estate.html">
             <img src="assets/img/popular5.jpg" alt="">
             <h1>Legacy Estate </h1>
             <h2>Nanjundapuram, Coimbatore </h2>
