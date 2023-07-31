@@ -174,20 +174,6 @@ body {
 }
 
 
-/* Add media queries for responsiveness */
-@media screen and (max-width: 768px) {
-    .video-container {
-        padding-bottom: 75%; /* Adjust this value for the desired aspect ratio on smaller screens */
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .video-container {
-        padding-bottom: 100%; /* Adjust this value for the desired aspect ratio on even smaller screens */
-    }
-}
-
-
 /*WhatsApp Animated Icon Styles*/
 .whatsapp-icon {
   position: fixed;
@@ -241,7 +227,40 @@ body {
   animation: move 2s infinite;
 }
 
+
+/* Add media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .video-container iframe {
+    height: 90%;
+  }
+  .section__title {
+    font-size:50px;
+  }
+    .video-container {
+        padding-bottom: 75%; /* Adjust this value for the desired aspect ratio on smaller screens */
+    }
+    
+}
+
+@media screen and (max-width: 576px) {
+  .video-container iframe {
+    height: 90%;
+  }
+  .section__title {
+    font-size:50px;
+  }
+    .video-container {
+        padding-bottom: 100%; /* Adjust this value for the desired aspect ratio on even smaller screens */
+    }
+}
+
 @media (max-width: 600px) {
+  .video-container iframe {
+    height: 90%;
+  }
+  .section__title {
+    font-size:50px;
+  }
 
   .whatsapp-icon {
     position: fixed;
