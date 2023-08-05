@@ -166,10 +166,122 @@
             </div>/
         </section>
          -->
-        <!--==================== POPULAR ====================-->
+
+
+         <!-- =======================highlight==================== -->
+
+         <section class="media" id="media">
+            <div class="main-text">
+                <h2>Media</h2>
+                <h1>Visual Journey</h1>
+            </div>
+           
+            <div class="main-container" id="image-container">
+                <div class="image image-1">
+                    <img src="./public/images/munnar-visual.png"
+                        alt="munnar">
+                    <h3>Munnar</h3>
+                </div>
+                <div class="image image-2">
+                    <img src="./public/images/pothamedu-visual.png"
+                        alt="Pothamed">
+                    <h3>Pothamed</h3>
+                </div>
+                <div class="image image-3">
+                    <img src="./public/images/lechimi-visual.jpg"
+                        alt="lechimi">
+                    <h3>lechimi</h3>
+                </div>
+                <div class="image image4">
+                    <img src="./public/images/Dam-visual.jpg"
+                        alt="dam">
+                    <h3>dam</h3>
+                </div>
+                <div class="image image-5">
+                    <img src="./public/images/fruit_garden-visual.png"
+                        alt="fruit_garden">
+                    <h3>fruit garden</h3>
+                </div>
+                <div class="image image-6">
+                    <img src="./public/images/Botanical_Garden-visual.png"
+                        alt="Botanical_Garden">
+                    <h3>Botanical Garden</h3>
+                </div>
+                <div class="image image-7">
+                    <img src="./public/images/park-visual.png"
+                        alt="park">
+                    <h3>Park</h3>
+                </div>
+                <div class="image image-8">
+                    <img src="./public/images/view-visual.png"
+                    alt="view_points">
+                    <h3>View-points</h3>
+                </div>
+                <div class="image image-9">
+                    <img src="./public/images/echo_point-visual.jpg"
+                    alt="echo_point">
+                    <h3>Echo_point</h3>
+                </div>
+                <div class="image image-10">
+                    <img src="./public/images/lakkom-visual.png"
+                    alt="lakkom">
+                    <h3>lakkom</h3>
+                </div>
+                <div class="image image-11">
+                    <img src="./public/images/Sandalwood_Forest-visual.png"
+                    alt="sandalwood">
+                    <h3>sandalwood</h3>
+                </div>
+                <div class="image image-12">
+                    <img src="./public/images/shooting_point-visual.jpg"
+                        alt="shooting-point">
+                    <h3>shooting-point</h3>
+                </div>
+                <div class="image image-13">
+                    <img src="./public/images/Tea_factory-visual.png"
+                        alt="Tea-factory">
+                        <h3>Tea-factory</h3>
+                </div>
+                <div class="image image-14">
+                        <img src="./public/images/flowergarden-visual.jpg"
+                            alt="flower-garden">
+                    <h3>flower-garden</h3>
+                </div>
+                </div>
+            </div>
+            
+                          
+             <script>
+                 const imageContainer = document.getElementById('image-container');
+                 let isScrolling = true;
+        
+                   // Handle click to toggle scrolling
+                    document.addEventListener('click', () => {
+                    isScrolling = !isScrolling;
+                     });
+        
+                   // Scrolling function
+                    function scrollImages() {
+                    if (isScrolling) {
+                     imageContainer.scrollLeft += 1;
+            
+                      // Reset scroll position to 0 if it's near the end
+                     if (imageContainer.scrollWidth - imageContainer.scrollLeft <= imageContainer.clientWidth) {
+                      imageContainer.scrollLeft = 0;
+                   } 
+                 }
+                      requestAnimationFrame(scrollImages);
+                }
+        
+                     // Start the scrolling
+                     scrollImages(); 
+                </script>
+        </section>
+
+         <!--==================== POPULAR ====================-->
         <section class="popular section" id="popular">
             <div class="container">
-                <span class="section__subtitle" style="margin-top:20px;">Best Choise</span>
+                <span class="section__subtitle" style="margin-top:20px;">Best Choice</span>
                 <h2 class="section__title">
                     Featuerd Current Projects<span>.</span>
                 </h2>
