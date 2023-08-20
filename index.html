@@ -26,7 +26,7 @@
 </head>
 
 <body>
-
+       
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
@@ -75,10 +75,12 @@
                 Contact
             </a>
         </nav>
+
     </header>
 
     <!--==================== MAIN ====================-->
     <main class="main">
+  
         <!--==================== HOME ====================-->
         <section class="home section" id="home">
             <div class="home__container container grid">
@@ -1070,7 +1072,87 @@
                 </div>
             </div>
         </section>
+<!--==================== Top Managemnet  ====================-->
+<!-- <section class="popular section" id="properties">
+    <div class="container">
+        <h2 class="section__title">
+            Top Management <span>.</span>
+        </h2>
 
+        <div class="popular__container swiper">
+            <div class="swiper-wrapper">
+                <article class="popular__card swiper-slide">
+                    <img  style="border-radius: 50%;" src="assets/img/popular2.jpg" alt="" class="popular__img">
+
+                    <div class="popular__data">
+                        <h2 class="popular__price">
+                            Residential propertie
+                        </h2>
+                        <h3 class="popular__title">
+                            Villas
+                        </h3>
+                        <p class="popular__description">
+                            Experience luxury and comfort in our modern and elegant villas.
+                        </p>
+                    </div>
+                </article>
+                <article class="popular__card swiper-slide">
+                    <img  style="border-radius: 50%;" src="assets/img/popular2.jpg" alt="" class="popular__img">
+
+                    <div class="popular__data">
+                        <h2 class="popular__price">
+                            Residential propertie
+                        </h2>
+                        <h3 class="popular__title">
+                            Villas
+                        </h3>
+                        <p class="popular__description">
+                            Experience luxury and comfort in our modern and elegant villas.
+                        </p>
+                    </div>
+                </article>
+                <article class="popular__card swiper-slide">
+                    <img  style="border-radius: 50%;" src="assets/img/popular2.jpg" alt="" class="popular__img">
+
+                    <div class="popular__data">
+                        <h2 class="popular__price">
+                            Residential propertie
+                        </h2>
+                        <h3 class="popular__title">
+                            Villas
+                        </h3>
+                        <p class="popular__description">
+                            Experience luxury and comfort in our modern and elegant villas.
+                        </p>
+                    </div>
+                </article>
+                <article class="popular__card swiper-slide">
+                    <img  style="border-radius: 50%;" src="assets/img/popular2.jpg" alt="" class="popular__img">
+
+                    <div class="popular__data">
+                        <h2 class="popular__price">
+                            Residential propertie
+                        </h2>
+                        <h3 class="popular__title">
+                            Villas
+                        </h3>
+                        <p class="popular__description">
+                            Experience luxury and comfort in our modern and elegant villas.
+                        </p>
+                    </div>
+                </article>
+                
+            </div>
+
+            <div class="swiper-button-next">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class='bx bx-chevron-left'></i>
+            </div>
+        </div>
+    </div>
+</section> -->
         <!--==================== SUBSCRIBE ====================-->
         <section class="subscribe section" id="about">
             <div class="subscribe__container container">
@@ -1142,7 +1224,8 @@
                              </li>
                       <li>
                          <a class="footer__link"><i class='bx bxs-phone'></i>Conatct Number </a><br> <a href="tel:+919865523344" class="footer__link">
-                            +91 9865523344 </a> <br> <a href="tel:+914243556589" class="footer__link"> +91 424 3556 589</a>
+                            +91 9865523344 </a><br> <a href="tel:+919994390806" class="footer__link">
+                                +91 9994390806 </a><br> <a href="tel:+914243556589" class="footer__link"> +91 424 3556 589</a>
                         </li>
                     </ul>
                 </div>
@@ -1185,7 +1268,28 @@
         </div>
     </footer>
 
+   <!--==================== POPUP ====================-->
+     
+   <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+        <img src="assets/img/sfari/1.jpeg" alt="Popup Image">
+        <button id="close-popup">Close</button>
+    </div>
+</div>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("popup");
+        const closeButton = document.getElementById("close-popup");
+
+        closeButton.addEventListener("click", function () {
+            popup.style.display = "none";
+        });
+
+        // Show the popup when the page loads
+        popup.style.display = "flex";
+    });
+</script>
     <!--========== SCROLL UP ==========-->
     <a href="#" class="scrollup" id="scroll-up">
         <i class='bx bx-chevrons-up'></i>
