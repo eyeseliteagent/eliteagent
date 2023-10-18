@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="/assets/img/eyeslogo.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== BOXICONS ===============-->
+    <link href="/your-path-to-uicons/css/uicons-rounded-regular.css" rel="stylesheet">
+    <link href="/your-path-to-uicons/css/uicons-rounded-bold.css" rel="stylesheet">
+    <link href="/your-path-to-uicons/css/uicons-rounded-solid.css" rel="stylesheet">  
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+
+    <style>
+
+        
+        h1{
+            padding-top: 10%;
+            text-align: center;
+            font-size: 2.5em;
+        }
+        
+        .search-bar{
+            margin: 1em auto;
+            background: var(--first-color-lighten);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1em;
+            max-width: 500px;
+            border-radius: 8px;
+            padding: 0 1em;
+            border-color: #111;
+        }
+        
+        .search-bar input{
+            flex-grow: 1;
+            height: 100%;
+            padding: 0.5em 0;
+            background: none;
+            border: none;
+            color: var(--first-color-alt);
+            font-size: 1.3em;
+        }
+        
+        .search-bar input::placeholder{
+            color: var(--first-color-alt);
+        }
+        
+        .search-bar input:focus{
+            outline: none;
+        }
+        
+        .panels{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5em;
+            margin: 8em 0 5em 0;
+        }
+        
+        .panel{
+            background: var(--body-color);
+            padding: 1.5em 1.8em 1.5em 1.8em;
+            max-width: 400px;
+            border-radius: 10px;
+            border-color: blueviolet;
+        }
+        
+        .panel h2{
+            margin: 1em 0.5em 0.5em 0;
+            font-size: var(--h2-font-size);
+        }
+        
+        .panel p{
+            font-size: 0.9em;
+            line-height: 25px;
+            color: var(--text-color);
+            margin: 0;
+        }
+        
+        .panel a{
+            display: inline-block;
+            color: var(--text-color);
+            margin-top: 1em;
+        }
+        
+        .panel a:hover{
+            color: var(--first-color);
+        }
+        
+        .panel img {
+          border-radius: 2%;
+          width: 100%;
+          height:300px;
+        }
+        
+        .panel h1 {
+          font-size: var(--h3-font-size);
+          text-align: left;
+        }
+        
+        .panel:hover {
+          box-shadow: 0 12px 20px 22px hsla(228, 82%, 37%, 0.1);
+        }
+
+        html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+
+        /* screen resolution */
+
+        /* For 1024px */
+@media (min-width: 1024px) {
+    
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+}
+
+/* For 768px */
+@media (min-width: 768px) and (max-width: 1023px) {
+   
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 30px;
+    padding-top: 10%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+}
+
+/* For 425px */
+@media (min-width: 425px) and (max-width: 767px) {
+  
+    /* .search-bar {
+    margin-right: 2rem;
+    margin-left: 7rem;
+  } */
+
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 30px;
+    padding-top: 15%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+
+}
+
+/* For 375px */
+@media (min-width: 375px) and (max-width: 424px) {
+    .search-bar {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 25px;
+    padding-top: 20%;
+    }
+
+    .panel{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+}
+
+/* For 320px */
+@media (max-width: 374px) {
+    
+
+    .search-bar {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
+    .search {
+    font-size: 20px;
+    line-height: 30px;
+    }
+
+    .search::placeholder {
+    font-size: 15px;
+    line-height: 20px;
+    opacity: 0.5;
+    }
+
+    h1{
+    font-size: 25px;
+    padding-top: 20%;
+    }
+
+    .panel{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
+}
+
+        
+/*WhatsApp Animated Icon Styles*/
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.icon-container {
+  display: inline-flex; /* Centers the icon vertically */
+  justify-content: center; /* Centers the icon horizontally */
+  width: 60px; /* Adjust size as needed */
+  height: 60px; /* Adjust size as needed */
+  border-radius: 50%; /* Makes the border round */
+  background-color:white; /* Sets the inside color to black */
+  border: 1px solid,black; /* Adjust border color/size as needed */
+}
+
+.whatsapp-icon i {
+  font-size: 48px;
+  color: green;
+  align-self: center; /* Centers the icon vertically */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.whatsapp-icon p {
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  margin-bottom: 10px; /* Add bottom margin */
+}
+
+/* Change color on hover */
+.whatsapp-icon:hover .icon-container {
+  background-color:black;
+}
+
+.whatsapp-icon:hover i {
+  color: green;
+}
+
+/*Animation Keyframes*/
+@keyframes move {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-20px); }
+}
+
+.move {
+  animation: move 2s infinite;
+}
+
+@media (max-width: 600px) {
+
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 10px;  /* reduced bottom margin */
+    right: 10px;  /* reduced right margin */
+  }
+  
+  .icon-container {
+    width: 50px;  /* reduced size */
+    height: 50px;  /* reduced size */
+  }
+  
+  .whatsapp-icon i {
+    font-size: 30px;  /* reduced font size */
+  }
+  
+  .whatsapp-icon p {
+    font-size: 12px;  /* reduced font size */
+  }
+  
+  /*Reduce animation intensity for smaller screens*/
+  @keyframes move {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-10px); }  /* reduced translation */
+  }
+
+}
+
+/*view more*/
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+        
+            </style>
+
+    <title>EYES-Real Estate Elite Agents</title>
+</head>
+
+<body>
+        <!-- WhatsApp Animated Icon -->
+<div id="whatsapp-icon" class="whatsapp-icon">
+    <a href="https://wa.me/919865523344" target="_blank">
+        <div class="icon-container">
+            <i class="ri-whatsapp-line"></i>
+                </div>
+        <p>WhatsApp Now!</p>
+    </a>
+</div>
+
+<!-- Animation Script -->
+<script>
+    window.onload = function() {
+        document.getElementById('whatsapp-icon').classList.add('move');
+    };
+</script>
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+              <div class="left-part">
+            <img src="/assets/img/eyeslogo.png" alt="">
+        </div>
+            <!-- Theme change button -->
+            <i class='bx bx-moon change-theme' id="theme-button"></i>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+
+    <h1>How can I help you?</h1>
+    <div class="search-bar">
+        <input type="text" placeholder="Search location... " class="search">
+    </div>
+
+    <div class="panels">
+        <div class="panel">
+            <a href="/Sai_gardenia.html">
+        <img src="/assets/img/sai gradien/SAI GARDENIA_page-0009.jpg" alt="">
+            <h1>Sai Gardenia</h1>
+            <h2>Peelamedu, Coimbatore</h2>
+            <p>
+                Welcome to Sai Gardenia Luxury Premimum Apartments and Villas - loacted at Peelamedu, Coimbatore<br><br>
+            </p>
+            </a>
+        </div>
+
+        <div class="panel">
+            <a href="/green_elite.html">
+        <img src="/assets/img/banner1.png" alt="">
+            <h1>Green Elite Luxury Premimum Residential Apartment</h1>
+            <h2>Hosur</h2>
+            <p>
+                Green Elite - Where Luxury Meets Elegance in Hosur            </p>
+            </a>
+        </div>
+
+    </div>
+    <script>
+      // Get elements from the DOM
+const search = document.querySelector('.search');
+const panels = document.querySelectorAll('.panel');
+
+// Add a input event
+// This event fires whenever you type something in the input field
+search.addEventListener('input', ()=>{
+    // If the search bar isn't empty
+    if(search.value!==""){
+        //Loop through all panels
+        panels.forEach(panel=>{
+            // Get the panel heading
+            const panelHeading = panel.querySelector('h2');
+            // Convert input value to lowercase letters
+            const panelHeadingText = panelHeading.innerHTML.toLowerCase();
+            // Convert input value to lowercase letters
+            // This will make the search case Unsensitive
+            const inputText = search.value.toLowerCase();
+            // If the heading text DOESN'T(!) contain what is in the search bar
+            if(!panelHeadingText.includes(inputText)){
+                // Hide that panel
+                panelHeading.parentElement.style.display = "none";
+            }
+            else{
+                // But if it does then make sure to show that panel
+                panelHeading.parentElement.style.display = "block";
+            }
+        });
+    }
+    else{
+        // If the search bar is empty
+        // Show all of the panels
+        panels.forEach(panel=>{
+            panel.style.display="block";
+        });
+    }
+});
+
+// disabling inspect element
+document.addEventListener("contextmenu", function(e){
+    e.preventDefault(); //this prevents right click
+});
+document.onkeydown=function(e){
+    if(event.keycode==123){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode=="I".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode=="C".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.shiftKey && e.keyCode=="J".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.keyCode=="U".charCodeAt(0)){
+        return false;
+    }
+    if(e.ctrlKey && e.keyCode=="S".charCodeAt(0)){
+        return false;
+    }
+};
+    </script>
+
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class='bx bx-chevrons-up'></i>
+    </a>
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src="/assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="/assets/js/main.js"></script>
+</body>
+
+</html>
